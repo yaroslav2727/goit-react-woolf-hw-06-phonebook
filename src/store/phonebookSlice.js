@@ -1,4 +1,4 @@
-import { createSlice, nanoid } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
 
@@ -16,7 +16,7 @@ export const phonebookSlice = createSlice({
   },
   reducers: {
     addContact: (state, { payload }) => {
-      state.contacts.push({ id: nanoid(), ...payload });
+      state.contacts.push(payload);
     },
     deleteContact: (state, { payload }) => {
       state.contacts = state.contacts.filter(item => item.id !== payload);

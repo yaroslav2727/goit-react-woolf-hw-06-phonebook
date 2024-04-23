@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addContact, selectContacts } from "store/phonebookSlice.js";
 import Container from "components/Container/Container.jsx";
 import { Form, Label, Input, Button, InputGroup } from "./ContactForm.styled.js";
+import { nanoid } from "@reduxjs/toolkit";
 
 const ContactForm = () => {
   const contacts = useSelector(selectContacts);
@@ -27,7 +28,7 @@ const ContactForm = () => {
       return;
     }
 
-    dispatch(addContact(contact));
+    dispatch(addContact({ id: nanoid(), ...contact }));
     setContact({ name: "", number: "" });
   };
 
