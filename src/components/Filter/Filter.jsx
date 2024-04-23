@@ -1,4 +1,5 @@
-import { selectFilter, updateFilter } from "store/phonebookSlice";
+// import { selectFilter, updateFilter } from "store/phonebookSlice";
+import { selectFilter, updateFilter } from "store/filterSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Input, Label, InputGroup, Title } from "./Filter.styled";

@@ -1,4 +1,6 @@
-import { deleteContact, selectContacts, selectFilter } from "store/phonebookSlice";
+// import { deleteContact, selectContacts, selectFilter } from "store/phonebookSlice";
+import { deleteContact, selectContacts } from "store/contactsSlice";
+import { selectFilter } from "store/filterSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Container from "components/Container/Container";
 import { List, Item, Button, Contactbox } from "./ContactList.styled";

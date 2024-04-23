@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addContact, selectContacts } from "store/phonebookSlice.js";
+// import { addContact, selectContacts } from "store/phonebookSlice.js";
+import { addContact, selectContacts } from "store/contactsSlice.js";
 import Container from "components/Container/Container.jsx";
 import { Form, Label, Input, Button, InputGroup } from "./ContactForm.styled.js";
 
